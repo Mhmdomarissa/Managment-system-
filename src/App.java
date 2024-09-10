@@ -1,22 +1,18 @@
 public class App { 
     public static void main(String[] args)throws Exception{
-        Bank bank1 = new Bank();
-        Bank bank2 = new Bank();
-        bank1.name = "Audi";
-        bank2.name = "Franca";
+        Bank bank1 = new Bank("Audi");
+        Bank bank2 = new Bank("Franca");
 
-        Account a1 = new Account();
+        Account a1 = new Account("123",100);
 
-        Client c1 = new Client();
+        Client c1 = new Client("Sami","123");
 
-        a1.balance = 100 ; 
-        a1.id = "123";
 
-        c1.accountNumber = "123";
-        c1.name = "Omar";
-        System.out.println(bank1.name);
-        System.out.println(bank2.name);
 
+
+
+        bank1.greet(c1);
+        bank2.greet(c1);
 
     }
 }
